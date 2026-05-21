@@ -728,13 +728,12 @@ footer {
 </script>
 </head>
 <script>
-  (function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.testimonial-slide');
     const dotsContainer = document.getElementById('t-dots');
     const counter = document.getElementById('t-counter');
     let current = 0;
 
-    // Remove any inline display styles so CSS class controls visibility
     slides.forEach((slide, i) => {
       slide.style.display = '';
       slide.classList.remove('active');
@@ -758,8 +757,8 @@ footer {
     document.getElementById('t-prev').addEventListener('click', () => goTo(current - 1));
     document.getElementById('t-next').addEventListener('click', () => goTo(current + 1));
 
-    goTo(0); // initialize
-  })();
+    goTo(0);
+  });
 </script>
 <body>
 
