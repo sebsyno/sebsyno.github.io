@@ -727,6 +727,40 @@ footer {
 }
 </script>
 </head>
+<script>
+  (function () {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dotsContainer = document.getElementById('t-dots');
+    const counter = document.getElementById('t-counter');
+    let current = 0;
+
+    // Remove any inline display styles so CSS class controls visibility
+    slides.forEach((slide, i) => {
+      slide.style.display = '';
+      slide.classList.remove('active');
+
+      const dot = document.createElement('button');
+      dot.className = 'testimonial-dot';
+      dot.setAttribute('aria-label', `Slide ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dotsContainer.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsContainer.children[current].classList.add('active');
+      counter.textContent = `${current + 1} / ${slides.length}`;
+    }
+
+    document.getElementById('t-prev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('t-next').addEventListener('click', () => goTo(current + 1));
+
+    goTo(0); // initialize
+  })();
+</script>
 <body>
 
 <!-- NAV -->
@@ -1032,7 +1066,7 @@ footer {
       </div>
       
       <!-- SLIDE 2 -->
-      <div class="testimonial-slide" style="display:none;">
+      <div class="testimonial-slide">
         <blockquote class="testimonial-quote">
           "One of the most hands-on and hardworking marketers out there. As a bonus, he'll throw in lots of fresh ideas and pour a ton of humor into your company. You will be lucky to have Sebastian on your team."
         </blockquote>
