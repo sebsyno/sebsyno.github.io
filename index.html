@@ -682,53 +682,82 @@ footer {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sebastian Synowiec",
-  "jobTitle": "Marketing Manager",
-  "description": "B2B marketing manager with 10 years of experience driving organic growth and pipeline for software and AI companies, and more.",
-  "url": "https://sebsyno.github.io/",
-  "email": "seb@syndesign.net",
-  "telephone": "+48608130815",
-  "sameAs": [
-    "https://www.linkedin.com/in/sebastian-synowiec-046271195/"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Sokolnicza 5/23",
-    "addressLocality": "Wrocław",
-    "postalCode": "53-676",
-    "addressCountry": "PL"
-  },
-  "vatID": "PL8992879079",
-  "knowsAbout": [
-    "B2B Marketing",
-    "Lead Generation",
-    "Performance Marketing",
-    "Technical SEO",
-    "HubSpot",
-    "Marketing Automation",
-    "AI Workflows",
-    "LinkedIn Ads",
-    "Google Ads",
-    "Content Marketing"
-  ],
-  "knowsLanguage": [
-    { "@type": "Language", "name": "German" },
-    { "@type": "Language", "name": "English" },
-    { "@type": "Language", "name": "Polish" }
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "VirtusLab"
-  },
-  "alumniOf": [
+  "@graph": [
     {
-      "@type": "CollegeOrUniversity",
-      "name": "York St John University"
+      "@type": "WebSite",
+      "@id": "https://sebsyno.github.io/#website",
+      "url": "https://sebsyno.github.io/",
+      "name": "Sebastian Synowiec | B2B Marketing & SEO",
+      "description": "Portfolio and marketing services by Sebastian Synowiec.",
+      "publisher": {
+        "@id": "https://sebsyno.github.io/#person"
+      }
     },
     {
-      "@type": "CollegeOrUniversity",
-      "name": "University of Vienna"
+      "@type": "WebPage",
+      "@id": "https://sebsyno.github.io/#webpage",
+      "url": "https://sebsyno.github.io/",
+      "name": "Sebastian Synowiec - Marketing Manager",
+      "isPartOf": {
+        "@id": "https://sebsyno.github.io/#website"
+      },
+      "about": {
+        "@id": "https://sebsyno.github.io/#person"
+      },
+      "description": "B2B marketing manager with 10 years of experience driving organic growth and pipeline for software and AI companies."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://sebsyno.github.io/#person",
+      "name": "Sebastian Synowiec",
+      "jobTitle": "Marketing Manager",
+      "description": "B2B marketing manager with 10 years of experience driving organic growth and pipeline for software and AI companies, and more.",
+      "url": "https://sebsyno.github.io/",
+      "image": "https://sebsyno.github.io/path-to-your-photo.jpg", 
+      "email": "seb@syndesign.net",
+      "telephone": "+48608130815",
+      "sameAs": [
+        "https://www.linkedin.com/in/sebastian-synowiec-046271195/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sokolnicza 5/23",
+        "addressLocality": "Wrocław",
+        "postalCode": "53-676",
+        "addressCountry": "PL"
+      },
+      "vatID": "PL8992879079",
+      "knowsAbout": [
+        "B2B Marketing",
+        "Lead Generation",
+        "Performance Marketing",
+        "Technical SEO",
+        "HubSpot",
+        "Marketing Automation",
+        "AI Workflows",
+        "LinkedIn Ads",
+        "Google Ads",
+        "Content Marketing"
+      ],
+      "knowsLanguage": [
+        { "@type": "Language", "name": "German" },
+        { "@type": "Language", "name": "English" },
+        { "@type": "Language", "name": "Polish" }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "VirtusLab"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "York St John University"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Vienna"
+        }
+      ]
     }
   ]
 }
