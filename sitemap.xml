@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,7 +7,18 @@
 
 <url>
   <loc>https://sebsyno.github.io/</loc>
-  <lastmod>2026-05-22T10:50:16+00:00</lastmod>
+  <lastmod>2026-06-09T19:23:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sebsyno.github.io/kpis/</loc>
+  <lastmod>2026-06-09T19:29:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sebsyno.github.io/pr/</loc>
+  <lastmod>2026-06-09T19:30:24+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
